@@ -1,8 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-# SharpDevelop 4.3
+# SharpDevelop 4.2.1.8805
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyKifu", "PrettyKifu\PrettyKifu.csproj", "{9333A6AB-E01D-44A2-8050-C0239FF363EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyKifu.Tests", "PrettyKifu.Tests\PrettyKifu.Tests.csproj", "{D1A00160-2E33-4476-B07A-11E37F445A9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE097278-D27A-4C0F-A63A-66CE96E00341}"
+	ProjectSection(SolutionItems) = postProject
+		README = README
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{158EE3B4-A667-499D-9611-AC3AA4FF97C5}"
+	ProjectSection(SolutionItems) = postProject
+		Libs\nunit.framework.dll = Libs\nunit.framework.dll
+		Libs\nunit.framework.xml = Libs\nunit.framework.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,5 +27,9 @@ Global
 		{9333A6AB-E01D-44A2-8050-C0239FF363EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9333A6AB-E01D-44A2-8050-C0239FF363EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9333A6AB-E01D-44A2-8050-C0239FF363EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A00160-2E33-4476-B07A-11E37F445A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A00160-2E33-4476-B07A-11E37F445A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A00160-2E33-4476-B07A-11E37F445A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A00160-2E33-4476-B07A-11E37F445A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
