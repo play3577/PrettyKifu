@@ -1,0 +1,20 @@
+﻿using System;
+using PrettyKifu.Board;
+
+namespace PrettyKifu.Game.CellActions
+{
+	public class SetStoneAction: ICellAction
+	{
+	    public StoneType StoneType {get; private set;}	   	    
+	    public SetStoneAction(StoneType stoneType)
+	    {
+	        StoneType = stoneType;
+	    }
+	    
+	    public void Apply(BoardCell cell)
+	    {
+	        cell.Stone = StoneType;
+	    }       
+	   
+	}
+}

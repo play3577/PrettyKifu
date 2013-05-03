@@ -1,0 +1,8 @@
+*.dll
+
+*.pdb
+/PrettyKifu.Tests/bin/Debug
+
+/PrettyKifu/obj/Debug
+
+/PrettyKifu.Tests/obj/Debug

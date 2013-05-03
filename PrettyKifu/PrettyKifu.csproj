@@ -7,12 +7,23 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PrettyKifu</RootNamespace>
     <AssemblyName>PrettyKifu</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -21,6 +32,7 @@
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -41,7 +53,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Board\BoardCell.cs" />
+    <Compile Include="CellMarker.cs" />
+    <Compile Include="Game\CellActions\SetLabelAction.cs" />
+    <Compile Include="Game\CellActions\SetMarkerAction.cs" />
+    <Compile Include="Game\CellActions\SetStoneAction.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GameInfo.cs" />
+    <Compile Include="Game\GameNode.cs" />
+    <Compile Include="Game\Move.cs" />
+    <Compile Include="ICellAction.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoneType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Game" />
+    <Folder Include="Board" />
+    <Folder Include="Game\CellActions" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
