@@ -17,5 +17,11 @@ namespace PrettyKifu.Game.CellActions
         {
            cell.Label = Label;
         }
+        
+        public override string ToString()
+        {
+            return string.Format("[Set Label: {0}]", Label);
+        }
+
     }
 }

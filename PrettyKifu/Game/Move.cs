@@ -27,5 +27,12 @@ namespace PrettyKifu.Game
             Position = position;
             Color = color;
         }
+        
+        public override string ToString()
+        {
+            string move = Pass ? "pass" : string.Format("at {0}", Position);            
+            return string.Format("[Move: {0} {1}]", Color, move);
+        }
+
     }
 }

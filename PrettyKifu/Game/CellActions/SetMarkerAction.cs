@@ -15,5 +15,11 @@ namespace PrettyKifu.Game.CellActions
         {
             cell.Marker = Marker;
         }
+        
+        public override string ToString()
+        {
+            return string.Format("[Set Marker: {0}]", Marker);
+        }
+
     }
 }

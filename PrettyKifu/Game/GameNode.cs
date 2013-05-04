@@ -6,10 +6,21 @@ namespace PrettyKifu.Game
     
     public enum MoveAnnotation
     {
+        None,
+        Bad,
+        Good, 
+        Doubtful,
+        Interesting                
     }
     
     public enum NodeAnnotation
     {
+        None,
+        GoodForWhite,
+        GoodForBlack,
+        Even,
+        Hotspot,
+        Unclear
     }
     
     public class GameNode
@@ -17,6 +28,7 @@ namespace PrettyKifu.Game
         public string Name{get; set;}
         public string Comment{get; set;}
         public Move Move{get; set;}
+        public int? MoveNumber {get; set;}
         
         public MoveAnnotation MoveAnnotation{get; set;}
         public NodeAnnotation NodeAnnotation{get; set;}
@@ -30,16 +42,14 @@ namespace PrettyKifu.Game
             }
         }
 
-        private readonly Dictionary<Position, ICellAction> actions = new Dictionary<Position, ICellAction>();
-        public IDictionary<Position, ICellAction> CellActions
+        private readonly List<KeyValuePair<Position, ICellAction>> actions = new List<KeyValuePair<Position, ICellAction>>();
+        public IEnumerable<KeyValuePair<Position, ICellAction>> CellActions
         {
             get
             {
                 return actions;
             }
         }       
-        
-        
         
         public GameNode()
         {
@@ -50,11 +60,9 @@ namespace PrettyKifu.Game
             branches.Add(node);
         }
         
-        public void AddPlacing(Position position, ICellAction placing)
-        {
-            // Проверять на наличие размещений в эту же позицию
-            // что делать при коллизии ?
-            actions.Add(position, placing);
+        public void AddPlacing(Position position, ICellAction action)
+        {            
+            actions.Add(new KeyValuePair<Position, ICellAction>(position, action));
         }
                
         

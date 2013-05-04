@@ -14,7 +14,13 @@ namespace PrettyKifu.Game.CellActions
 	    public void Apply(BoardCell cell)
 	    {
 	        cell.Stone = StoneType;
-	    }       
+	    }
+	    
+	    public override string ToString()
+        {
+            return string.Format("[Set Stone: {0}]", StoneType);
+        }
+
 	   
 	}
 }
