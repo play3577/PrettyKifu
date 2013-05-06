@@ -63,6 +63,7 @@
     <Compile Include="Game\GameNode.cs" />
     <Compile Include="Game\Move.cs" />
     <Compile Include="ICellAction.cs" />
+    <Compile Include="Parsers\SGFParser.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoneType.cs" />
@@ -71,6 +72,7 @@
     <Folder Include="Game" />
     <Folder Include="Board" />
     <Folder Include="Game\CellActions" />
+    <Folder Include="Parsers" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

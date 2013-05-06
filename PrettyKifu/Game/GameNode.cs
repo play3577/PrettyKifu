@@ -53,18 +53,26 @@ namespace PrettyKifu.Game
         
         public GameNode()
         {
+            Name = "";
+            Comment = "";
+            Move = null;
+            MoveNumber = null;
+            MoveAnnotation = MoveAnnotation.None;
+            NodeAnnotation = NodeAnnotation.None;
         }
-        
-        public void AddBranch(GameNode node)
-        {
-            branches.Add(node);
-        }
-        
-        public void AddPlacing(Position position, ICellAction action)
+                       
+        public void AddAction(Position position, ICellAction action)
         {            
             actions.Add(new KeyValuePair<Position, ICellAction>(position, action));
         }
-               
+        
+        public GameNode CreateBranch()
+        {
+            GameNode branch = new GameNode();
+            branches.Add(branch);
+            
+            return branch;
+        }       
         
     }
 }

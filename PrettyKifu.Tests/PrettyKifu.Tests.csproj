@@ -44,7 +44,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parsers\GameFactory.cs" />
+    <Compile Include="Parsers\SGFParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Parsers" />
+    <Folder Include="Parsers\SGF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Parsers\SGF\SimpleGame.sgf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrettyKifu\PrettyKifu.csproj">
+      <Project>{9333A6AB-E01D-44A2-8050-C0239FF363EE}</Project>
+      <Name>PrettyKifu</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
